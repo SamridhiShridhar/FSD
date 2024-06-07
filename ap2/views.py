@@ -40,3 +40,9 @@ def aboutus(request):
     return render(request,'aboutus.html')
 def contactus(request):
     return render(request,'contactus.html')
+
+def getpos(request):
+    return render(request,'pos.html')
+
+def getstable(request):
+    return render(request,'stable.html')

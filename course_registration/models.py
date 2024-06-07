@@ -13,3 +13,9 @@ class Course(models.Model):
     course_id = models.IntegerField(default=0,unique=True) 
     def __str__(self): 
         return self.name
+    
+class Meeting(models.Model):
+    meeting_code=models.CharField(max_length=100)
+    meeting_dt=models.DateField(auto_now_add=True)
+    meeting_subject=models.CharField(max_length=100)
+    meeting_np=models.IntegerField()

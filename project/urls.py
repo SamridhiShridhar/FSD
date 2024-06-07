@@ -18,8 +18,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 from ap1.views import current_date_time, find_mode, n_hours, table_of_squares, vote, vowel_consonants
-from ap2.views import aboutus, contactus, home, showlist
-
+from ap2.views import aboutus, contactus, home, showlist,getpos, getstable
+from course_registration.views import insert_demo,update_demo,delete_demo,retreive_demo 
 urlpatterns = [
     path('',include('ap2.urls')),
     path('admin/', admin.site.urls),
@@ -34,5 +34,11 @@ urlpatterns = [
     path('aboutus/',aboutus),
     path('home/',home),
     path('contactus/',contactus), 
-    path('registration/', include('course_registration.urls')), 
+    path('registration/', include('course_registration.urls')),
+    path('getpos/',getpos),
+    path('getstable/', getstable),
+    path('insert_demo/', insert_demo),
+    path('update_demo/', update_demo),
+    path('delete_demo/', delete_demo),
+    path('retreive_demo/', retreive_demo),
 ]
