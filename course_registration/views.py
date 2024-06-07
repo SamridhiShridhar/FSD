@@ -7,7 +7,7 @@ def add_student(request):
         form = StudentForm(request.POST) 
         if form.is_valid(): 
             form.save() 
-            return redirect('students_list') 
+            return redirect('add_student') 
     else: 
         form = StudentForm() 
     return render(request, 'course_registration/add_student.html', {'form': form})

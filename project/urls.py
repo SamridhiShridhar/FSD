@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 from ap1.views import current_date_time, find_mode, n_hours, table_of_squares, vote, vowel_consonants
-from ap2.views import aboutus, contactus, home, showlist
+from ap2.views import aboutus, contactus, getpos, home, showlist, stable
 
 urlpatterns = [
     path('',include('ap2.urls')),
@@ -35,4 +35,6 @@ urlpatterns = [
     path('home/',home),
     path('contactus/',contactus), 
     path('registration/', include('course_registration.urls')), 
+    path('getpos/', getpos),
+    path('stable/',stable),
 ]
